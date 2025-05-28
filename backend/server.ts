@@ -17,12 +17,13 @@ app.use(express.json());
 app.use(
 	cors({
 		origin: [
+			"http://localhost:8081",
 			"https://scootmx-2.cheappass.club",
-			// "https://scootmx-server-2.cheappass.club",
-			// "*.uploadthing.com",
-			// "*.*.uploadthing.com",
-			// "*.ingest.uploadthing.com",
-			// /^https:\/\/[\w-]+\.ingest\.uploadthing\.com$/,
+			"https://scootmx-server-2.cheappass.club",
+			"*.uploadthing.com",
+			"*.*.uploadthing.com",
+			"*.ingest.uploadthing.com",
+			/^https:\/\/[\w-]+\.ingest\.uploadthing\.com$/,
 		],
 		methods: ["GET", "POST", "PUT", "DELETE", "HEAD", "OPTIONS"],
 		credentials: true,
