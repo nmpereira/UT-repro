@@ -4,7 +4,9 @@ import express, { Request, Response } from "express";
 import { createServer } from "http";
 // eslint-disable-next-line import/no-cycle
 import router from "./routes/routes";
+import dotenv from "dotenv";
 
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 4000;
 const httpServer = createServer(app);
