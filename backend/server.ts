@@ -1,4 +1,4 @@
-import { clerkMiddleware } from "@clerk/express";
+
 import cors from "cors";
 import express, { Request, Response } from "express";
 import { createServer } from "http";
@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const httpServer = createServer(app);
 app.use(express.json());
-app.use(clerkMiddleware());
+
 
 // middleware
 app.use(
