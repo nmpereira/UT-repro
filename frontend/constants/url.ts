@@ -1,0 +1,1 @@
+export const backendUrl = process.env.EXPO_PUBLIC_BACKEND_URL || "https://scootmx-server-2.cheappass.club";

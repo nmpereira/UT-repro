@@ -1,11 +1,8 @@
 import { Colors } from "@/constants/Colors";
+import { backendUrl } from "@/constants/url";
 import { generateReactNativeHelpers } from "@uploadthing/expo";
 import { openSettings } from "expo-linking";
-import { useState } from "react";
 import { Alert, Pressable, Text, View } from "react-native";
-
-
-const backendUrl = process.env.EXPO_PUBLIC_SERVER_URL || "https://scootmx-server.cheappass.club";
 
 export const { useImageUploader, useDocumentUploader } =
     generateReactNativeHelpers({

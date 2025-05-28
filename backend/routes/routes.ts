@@ -5,6 +5,11 @@ import { uploadRouter } from "../controllers/uploadThing";
 const router = express.Router();
 
 
+router.get("/test", (req, res) => {
+	res.status(200).json({
+		message: `Hello world from the server`,
+	});
+});
 
 // Add UploadThing route
 router.use(
