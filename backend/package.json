@@ -1,0 +1,64 @@
+{
+	"dependencies": {
+		"@clerk/express": "^1.4.7",
+		"axios": "^1.6.0",
+		"cors": "^2.8.5",
+		"express": "^4.21.2",
+		"ioredis": "^5.6.1",
+		"jest": "^29.5.0",
+		"mongoose": "^7.5.0",
+		"short-unique-id": "^5.2.2",
+		"uploadthing": "^7.7.2"
+	},
+	"scripts": {
+		"build": "npx tsc",
+		"build:dev": "npx tsc --project tsconfig.development.json",
+		"start": "node dist/server.js",
+		"build:ci": "npm i && npm run build",
+		"dev": "nodemon server.ts --exec ts-node",
+		"test": "rm -rf dist && jest --watchAll --verbose --coverage",
+		"test:ci": "jest --ci --verbose --coverage",
+		"build:package": "rm -rf node_modules && rm package-lock.json && npm i",
+		"lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+		"format": "npx prettier --write"
+	},
+	"name": "scootmx-backend",
+	"description": "",
+	"version": "1.0.0",
+	"engines": {
+		"node": "20.18.1"
+	},
+	"main": "server.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nmpereira/ScootMx-backend.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nmpereira/ScootMx-backend/issues"
+	},
+	"homepage": "https://github.com/nmpereira/ScootMx-backend#readme",
+	"devDependencies": {
+		"@types/cors": "^2.8.17",
+		"@types/express": "^4.17.17",
+		"@types/http-server": "^0.12.1",
+		"@types/jest": "^29.5.1",
+		"@types/node": "^20.2.5",
+		"@typescript-eslint/eslint-plugin": "^5.59.8",
+		"@typescript-eslint/parser": "^5.59.8",
+		"dotenv": "^16.5.0",
+		"eslint": "^8.41.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-prefer-arrow": "^1.2.3",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-unused-imports": "^2.0.0",
+		"nodemon": "^3.1.9",
+		"prettier": "^2.8.8",
+		"ts-jest": "^29.1.0",
+		"typescript": "^5.0.4"
+	}
+}
